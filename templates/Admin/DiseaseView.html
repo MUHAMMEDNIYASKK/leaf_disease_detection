@@ -1,0 +1,27 @@
+{% extends 'Admin/admin_index.html' %}
+{% block body %}
+<form action="" method="get">
+  <table class="table table-borderless">
+   <u><h3 align="center">Predict Info</h3></u>
+    <tr>
+      <td>S.no</td>
+      <td>User_info</td>
+      <td>Image</td>
+      <td>Result</td>
+    </tr>
+  {% for i in data %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['name'] }}<br>
+            {{ i['phone'] }}<br>
+            {{ i['place'] }}
+
+        </td>
+        <td><img src="{{ i['image'] }}" height="200px" width="500px" ></td>
+        <td>{{ i['prediction'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>&nbsp;</p>
+    </form>
+{% endblock %}

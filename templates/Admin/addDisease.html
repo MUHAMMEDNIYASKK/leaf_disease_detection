@@ -1,0 +1,24 @@
+{% extends 'Admin/admin_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/Add_disease_post">
+  <table class="table table-borderless">
+        <u><h3 align="center">Add Disease</h3></u>
+    <tr>
+      <td>Disease name</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Discription</td>
+      <td><label for="textfield3"></label>
+        <label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5" class="form-control" required></textarea></td>
+    </tr>
+    <tr>
+        <td>
+      <td><input type="submit" name="button" id="button" value="Submit"  class="btn btn-primary"/></td>
+        </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

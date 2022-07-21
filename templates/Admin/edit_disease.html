@@ -1,0 +1,23 @@
+{% extends 'Admin/admin_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/edit_disease_post">
+<table class="table table-hover">
+       <u><h3 align="center">Edit Disease</h3></u>
+
+    <tr>
+      <td>Disease name<input type="hidden" name="did" value="{{ data['d_id'] }}"  /></td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data['name'] }}" required /></td>
+    </tr>
+    <tr>
+      <td>Discription</td>
+      <td><label for="textfield3"></label>
+        <label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5" required >{{ data['discription'] }} </textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"align="center"><input type="submit" name="button" id="button" value="OK" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

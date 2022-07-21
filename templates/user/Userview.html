@@ -1,0 +1,45 @@
+{% extends 'user/user_index.html' %}
+{% block body %}
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+<form id="form1" name="form1" method="post" action="/profile_post" enctype="multipart/form-data">
+ <table class="table table-borderless">
+     <u><h3 align="center">PROFILE</h3></u>
+    <tr>
+      <td><img src="{{ data['image'] }}" ></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ data['name'] }}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{ data['gender']}}</td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td>{{ data['place']}}</td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td>{{ data['district']}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{ data['phone']}}</td>
+    </tr>
+    <tr>
+      <td>E-mail</td>
+      <td>{{ data['email']}}</td>
+    </tr>
+    <tr>
+        <td>
+      <td><a href="/edit_profile/{{ data['u_log_id'] }}" class="btn btn-primary">Update</a></td></td>
+  </table>
+</form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'user/user_index.html' %}
+{% block body %}
+<form action="/User_selection_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+   <table class="table table-hover">
+          <u><h3 align="center">Upload Images</h3></u>
+    <tr>
+      <td>Select file</td>
+      <td><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField"  required/></td>
+    </tr>
+    <tr>
+        <td>
+      <td><input type="submit" name="button" id="button" value="Submit" class="btn btn-success" /></td>
+        </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'user/user_index.html' %}
+{% block body %}
+
+<form action="/Diseaseview_user_post" method="post">
+<table class="table table-borderless">
+    <u><h3 align="center">Disease View</h3></u>
+    <tr>
+      <td> Name</td>
+        <td>
+      <input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+      <td><input type="submit" name="button" id="button" value="Search" class="btn btn-primary"/></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+ <table class="table table-hover">
+    <tr>
+      <td>D_Id</td>
+      <td>Disease</td>
+      <td>Discription</td>
+
+    </tr>
+   {% for i in data %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['name'] }}</td>
+        <td>{{ i['discription'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>&nbsp;</p>
+</form>
+
+{% endblock %}
